@@ -22,16 +22,17 @@ print("Enter the amount")   #Taking input of the amount
 amount=int(input())
 print("Enter the currency") #Taking input of the currency
 currency=input()
-if(currency=="British Pound"):  #condition for currency
+currency=currency.lower()
+if(currency=="british pound"):  #condition for currency
 
     denominations = [1, 2, 5, 10, 20, 50]
     available_coins = {1: 10, 2: 10, 5: 10, 10: 10, 20: 10, 50: 10}
     result = minimum_coins(amount, denominations, available_coins) #calling minimum coin function
-elif (currency == "US Dollar"):
+elif (currency == "us dollar"):
     denominations = [1, 5, 10, 25]
     available_coins = {1: 10, 2: 10, 5: 10, 10: 10, 20: 10, 50: 10}
     result = minimum_coins(amount, denominations, available_coins)
-elif (currency == "Norwegian Krone"):
+elif (currency == "norwegian krone"):
     denominations = [1, 5, 10, 20]
     available_coins = {1: 10, 2: 10, 5: 10, 10: 10, 20: 10, 50: 10}
     result = minimum_coins(amount, denominations, available_coins)
